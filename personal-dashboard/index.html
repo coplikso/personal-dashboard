@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="icon" type="image/png" href="src/assets/lowgow.png">
-    <title>ken dashh</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" type="image/png" href="/src/assets/lowgow.png" />
+    <title>Ken Dashh</title>
+  </head>
+  <body>
+    <main class="dashboard-shell">
+      <section class="welcome-panel">
+        <p class="eyebrow">personal dashboard</p>
+        <h1 class="main-title" style="font-family: sans-serif;">Welcome!</h1>
+      </section>
 
-    <div class="main-title">
-    <h1>Welcome!</h1>
-    </div>
-    <!-- mac dock -->
+      <section id="window-card" aria-label="preview panel">
+        <div id="window-bar">
+          <span class="window-dot red"></span>
+          <span class="window-dot yellow"></span>
+          <span class="window-dot green"></span>
+        </div>
+        <div id="window-content"></div>
+      </section>
+    </main>
+
     <div class="dock">
-        <div class="dock-item" title="github" onclick="togglegithub()">
+        <button class="dock-item" title="github" onclick="togglegithub()">
             <img src="src/assets/github.png" alt="github dashboard" class="dock-icon">
             <span class="dock-label">GitHub dashboard</span>
             <div class="dock-dot" id="github-dot"></div>
-        </div>
-        <div class="dock-item" title="Mymusic" onclick="togglemymusic()">
+        </button>
+        <button class="dock-item" title="Mymusic" onclick="togglemymusic()">
             <img src="src/assets/music.png" alt="Mymusic" class="dock-icon">
             <span class="dock-label">music</span>
             <div class="dock-dot" id="Mymusic-dot"></div>
-        </div>
-        <div class="dock-item" title="photo dump" onclick="togglemymusic()">
+        </button>
+        <button class="dock-item" title="photo dump" onclick="togglemymusic()">
             <img src="src/assets/photos.png" alt="photo dump" class="dock-icon">
             <span class="dock-label">photo dump</span>
             <div class="dock-dot" id="photo-dot"></div>
-        </div>
+        </button>
     </div>
-    <script src="script.js"></script>
-</body>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
